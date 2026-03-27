@@ -1,3 +1,15 @@
+Company Name :Codtech IT Solutions Private Limited
+
+Name : Sreelekshmi B
+
+Intern ID :CTIS6069
+
+Domain : Web Development
+
+Duration : 4 weeks
+
+Mentor Name : Neela Santhosh
+
 # Real-Time Collaborative Document Editor
 
 ## Overview
