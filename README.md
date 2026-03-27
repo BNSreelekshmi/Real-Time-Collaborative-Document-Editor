@@ -78,3 +78,9 @@ The frontend will run on http://localhost:3000 and the backend on http://127.0.0
 
 ## Conclusion
 This project demonstrates a practical implementation of a real-time collaborative system using modern web technologies. It highlights the integration of frontend and backend systems, real-time communication, and database persistence, making it a strong foundation for building scalable collaborative applications.
+
+## Outputs
+<img width="1850" height="958" alt="Image" src="https://github.com/user-attachments/assets/8755ccf7-7ed9-4082-8d69-81954f2332fd" />
+<img width="1523" height="918" alt="Image" src="https://github.com/user-attachments/assets/d1cba0d2-93b8-47ea-85fe-14894f581773" />
+<img width="1907" height="932" alt="Image" src="https://github.com/user-attachments/assets/82f4888d-f209-4396-b985-3ffffc374cf8" />
+<img width="1401" height="887" alt="Image" src="https://github.com/user-attachments/assets/5fd78377-f02c-43b8-9bed-49e66acd3204" />
