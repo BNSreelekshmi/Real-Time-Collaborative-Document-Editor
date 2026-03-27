@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Real-Time Collaborative Document Editor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+The Real-Time Collaborative Document Editor is a full-stack web application that allows multiple users to create, edit, and manage documents simultaneously. The application provides real-time synchronization of content across multiple browser tabs or users, similar to platforms like Google Docs. It is designed to demonstrate modern web development concepts such as real-time communication, REST APIs, authentication, and database integration.
 
-## Available Scripts
+## Features
+- User authentication (Login and Register)
+- Create and manage multiple documents
+- Real-time collaborative editing using WebSockets
+- Rich text editor powered by React Quill
+- Automatic saving of document content to the database
+- Multi-tab synchronization (changes reflect instantly)
+- Simple and intuitive user interface
 
-In the project directory, you can run:
+## Tech Stack
+### Frontend:
+- React.js
+- React Quill (Rich Text Editor)
+- Socket.IO Client
 
-### `npm start`
+### Backend:
+- Flask (Python)
+- Flask-SocketIO for real-time communication
+- Flask-CORS for cross-origin requests
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Database:
+- PostgreSQL (via SQLAlchemy ORM)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How It Works
+Users can register and log in to the application. After logging in, they can view a list of their documents and select any document to edit. When a document is opened, the client joins a specific Socket.IO room associated with that document. Any changes made in the editor are sent to the server in real time and broadcast to all connected clients in the same room. This ensures that multiple users or tabs see updates instantly.
 
-### `npm test`
+The backend also saves the document content to the PostgreSQL database, ensuring persistence even after refreshing or reopening the application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Setup
 
-### `npm run build`
+### Backend Setup:
+1. Navigate to the server folder:
+   cd server
+2. Install dependencies:
+   pip install -r requirements.txt
+3. Run the Flask server:
+   python app.py
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend Setup:
+1. Navigate to the client folder:
+   cd client
+2. Install dependencies:
+   npm install
+3. Start the React app:
+   npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The frontend will run on http://localhost:3000 and the backend on http://127.0.0.1:5001.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
+- server/: Contains Flask backend, database models, and API routes
+- client/: Contains React frontend and components
+- components/: Includes Editor and Login components
+- api.js: Handles API calls between frontend and backend
 
-### `npm run eject`
+## Future Improvements
+- Add document sharing between users
+- Implement user presence (show active users)
+- Add version history for documents
+- Improve UI/UX with better styling
+- Add role-based permissions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Conclusion
+This project demonstrates a practical implementation of a real-time collaborative system using modern web technologies. It highlights the integration of frontend and backend systems, real-time communication, and database persistence, making it a strong foundation for building scalable collaborative applications.
