@@ -25,6 +25,7 @@ The Real-Time Collaborative Document Editor is a full-stack web application that
 - Simple and intuitive user interface
 
 ## Tech Stack
+
 ### Frontend:
 - React.js
 - React Quill (Rich Text Editor)
